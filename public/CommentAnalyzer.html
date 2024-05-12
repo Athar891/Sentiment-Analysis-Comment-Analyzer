@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Comment Analyzer</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body background="bg1.webp">
+  <nav class='navbar'>
+    <ul>
+      <li><a href='index.html'>Home</a></li>
+      <li><a href='CommentAnalyzer.html'>Comment Analyzer</a></li>
+      <li><a href='contact.html'>Contact</a></li> 
+    </ul>
+  </nav>
+  <div class="container">
+    <h1>YouTube Comment Analyzer</h1>
+    <input type="text" id="videoLink" placeholder="Paste YouTube video link">
+    <button onclick="searchVideo()" >Search</button>
+    <div id="commentsContainer"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fetch Tweets</title>
+<script src="fetchTweets.js"></script> <!-- Include the external JavaScript file -->
+</head>
+<body>
+  <div>
+    <label for="twitterHandle">Enter Twitter Handle:</label>
+    <input type="text" id="twitterHandle" placeholder="e.g., username">
+    <button onclick="fetchAndDisplayTweets()">Fetch Tweets</button>
+  </div>
+  <div id="tweetOutput"></div> <!-- Output div for displaying tweets -->
+</body>
+</html>

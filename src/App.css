@@ -1,0 +1,163 @@
+body {
+  display: block;
+  margin: 0%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+ /* Add styles for the navigation bar */
+/* Add styles for the navigation bar */
+nav {
+  background-color: #000000; /* Change the background color to a different color */
+  padding: 10px 0 ; /* Add padding to give some space around the navigation links */
+  margin-bottom: 0px; /* Add margin at the bottom to create space between the navigation bar and other content */
+  margin-right: 0;
+}
+
+/* Style the list items */
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font: 1em sans-serif;
+}
+
+/* Style the navigation links */
+nav ul li {
+  display: inline; /* Display the list items inline */
+  margin-right: 4px;
+}
+
+nav ul li a {
+  position: relative;
+  color: rgb(255, 255, 255); /* Set the initial text color to white */
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 30px; /* Add border radius to create a curved button */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions for text color and background color */
+}
+
+/* Style the navigation links on hover */
+nav ul li a:hover {
+  color: #000; /* Change text color to black on hover */
+  background-color: #fff; /* Change background color to white on hover */
+}
+
+/* Create a pseudo-element for the curved button effect */
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -1%;
+  width: 100%;
+  height: 120%;
+  background-color: transparent;
+  border-radius: 50%;
+  transform: scaleX(2); /* Initially, the curve is flat */
+  transition: transform 0.3s ease; /* Smooth transition for the curved effect */
+  z-index: -1;
+}
+
+/* Adjust the curved button effect on hover */
+nav ul li a:hover::before {
+  transform: scaleX(0); /* Scale the curve to reveal on hover */
+}
+
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+
+
+.App-header {
+  background-image: url('/public/bg.png'); /* Assuming bg.png is located in the /public directory */
+  background-size: cover;
+  background-position: center;
+  opacity: 75%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 8vmin);
+  color: rgb(0, 0, 0);
+}
+
+ 
+input[type="text"] {
+  background: transparent;
+  border: 1px solid #eeeeee47;
+  padding: 14px 21px;
+  border-radius: 50px;
+  color: #fff;
+  width: 300px;
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 15px;
+  /* Add a reduced glowing effect */
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #00bfff, 0 0 15px #0080ff, 0 0 20px #0040ff, 0 0 25px #0000ff, 0 0 30px #4b0082, 0 0 35px #8a2be2, 0 0 40px #8a2be2;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #00bfff, 0 0 15px #0080ff, 0 0 20px #0040ff, 0 0 25px #0000ff, 0 0 30px #4b0082, 0 0 35px #8a2be2, 0 0 40px #8a2be2;
+  }
+  to {
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #00bfff, 0 0 30px #0080ff, 0 0 40px #0040ff, 0 0 50px #0000ff, 0 0 60px #4b0082, 0 0 70px #8a2be2, 0 0 80px #8a2be2;
+  }
+}
+
+
+input[type="text"]::placeholder {
+  visibility: hidden;
+  color: transparent;
+  animation: matrix-text 5s steps(14) infinite;
+}
+
+@keyframes matrix-text {
+  from {
+    content: " ";
+  }
+  to {
+    content: "Enter text here";
+  }
+}
+
+
+p.icon {
+  font-size: 200px;
+  margin-bottom: 24px;
+}
+
+.result {
+  display: flex;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+span.positive {
+  background: #319ce3;
+}
+
+.result span {
+  font-size: 30px;
+  padding: 3px 12px;
+  border-radius: 7px;
+  text-transform: capitalize;
+}
+
+span.negative {background: #a4241b;}
