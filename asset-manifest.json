@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Sentiment-Analysis-Comment-Analyzer/static/css/main.d7551cbb.css",
+    "main.js": "/Sentiment-Analysis-Comment-Analyzer/static/js/main.5e38bc7b.js",
+    "static/media/bg.png": "/Sentiment-Analysis-Comment-Analyzer/static/media/bg.b7584d84d8c40ca6fd5d.png",
+    "index.html": "/Sentiment-Analysis-Comment-Analyzer/index.html",
+    "main.d7551cbb.css.map": "/Sentiment-Analysis-Comment-Analyzer/static/css/main.d7551cbb.css.map",
+    "main.5e38bc7b.js.map": "/Sentiment-Analysis-Comment-Analyzer/static/js/main.5e38bc7b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7551cbb.css",
+    "static/js/main.5e38bc7b.js"
+  ]
+}

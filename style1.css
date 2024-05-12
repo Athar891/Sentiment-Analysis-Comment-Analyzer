@@ -1,0 +1,195 @@
+/* Keyframes for color fade animation */
+@keyframes colorFade {
+  0% {
+    color: #336699; /* Dark blue */
+  }
+  50% {
+    color: #4e7eb5; /* Medium blue */
+  }
+  100% {
+    color: #336699; /* Dark blue */
+  }
+}
+
+/* Base styles for body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: colorFade 5s infinite; /* Change '5s' to adjust animation speed */
+}
+
+/* Navigation styles */
+nav {
+  background-color: #000000; /* Change the background color to a different color */
+  padding: 10px 0; /* Add padding to give some space around the navigation links */
+  margin-bottom: 20px; /* Add margin at the bottom to create space between the navigation bar and other content */
+}
+
+/* Style the list items */
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  font: 1em sans-serif;
+}
+
+/* Style the navigation links */
+nav ul li {
+  display: inline; /* Display the list items inline */
+}
+
+nav ul li a {
+  position: relative;
+  color: rgb(255, 255, 255); /* Set the initial text color to white */
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 30px; /* Add border radius to create a curved button */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions for text color and background color */
+}
+
+/* Style the navigation links on hover */
+nav ul li a:hover {
+  color: #000; /* Change text color to black on hover */
+  background-color: #fff; /* Change background color to white on hover */
+}
+
+/* Create a pseudo-element for the curved button effect */
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -1%;
+  width: 100%;
+  height: 120%;
+  background-color: transparent;
+  border-radius: 50%;
+  transform: scaleX(2); /* Initially, the curve is flat */
+  transition: transform 0.3s ease; /* Smooth transition for the curved effect */
+  z-index: -1;
+}
+
+/* Adjust the curved button effect on hover */
+nav ul li a:hover::before {
+  transform: scaleX(0); /* Scale the curve to reveal on hover */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  nav ul li {
+    display: block; /* Change to block for stacking on smaller screens */
+    margin-bottom: 10px; /* Add margin between stacked items */
+  }
+  
+  input[type="text"] {
+    width: 100%; /* Adjust width to fit the container */
+  }
+}
+
+/* Styles for input text */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px #336699; /* Initial box-shadow, adjust the color as needed */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Styles for input text when focused */
+input[type="text"]:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 10px 2px #336699; /* Glowing effect, adjust size and color as needed */
+  animation: glow 1s infinite alternate; /* Glowing animation */
+}
+
+/* Keyframes for glowing animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px 2px #3e94ea; /* Initial box-shadow */
+  }
+  100% {
+    box-shadow: 0 0 10px 2px #30669c; /* Glowing effect */
+  }
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Outer and inner shadows */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative; /* Position relative for absolute positioning of the pseudo-element */
+}
+
+/* Pseudo-element styles for button */
+button::before {
+  content: '';
+  position: absolute;
+  top: -2px; /* Adjust the distance from the top */
+  left: -2px; /* Adjust the distance from the left */
+  right: -2px; /* Adjust the distance from the right */
+  bottom: -2px; /* Adjust the distance from the bottom */
+  border-radius: 5px; /* Same border radius as the button */
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.5), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5), rgba(0, 0, 255, 0.5)); /* Adjust gradient colors and stops */
+  z-index: -1; /* Place the pseudo-element behind the button */
+  animation: glowing 1.5s linear infinite; /* Apply glowing animation */
+}
+
+/* Keyframes for glowing animation */
+@keyframes glowing {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 255, 0.8)); /* Start glowing effect */
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(0, 0, 255, 0.8)); /* Midpoint of glowing effect */
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 255, 0.8)); /* End glowing effect */
+  }
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #122195;
+  transform: translateY(-1px) translateZ(0); /* Lift the button slightly and reset the z-axis */
+}
+
+/* Button active effect */
+button:active {
+  transform: translateY(1px) translateZ(0); /* Push the button down when clicked */
+}
+
+/* Container styles */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Styles for comments container */
+#commentsContainer {
+  text-align: left;
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border: 1px solid #ced4da; /* Border for visual separation */
+}
+
+/* Styles for comment types */
+.neutral {
+  color: #333333; /* Neutral comments color */
+}
+
+.positive {
+  color: #5e3df1; /* Positive comments color */
+}
+
+.negative {
+  color: #dc3545; /* Negative comments color */
+}

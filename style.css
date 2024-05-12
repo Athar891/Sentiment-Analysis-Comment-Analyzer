@@ -1,0 +1,94 @@
+/* Add styles for the navigation bar */
+body {
+  background-image: url('/public.');
+  display: inline;
+  margin: 0%;
+}
+
+nav {
+  background-color: #000000;
+  padding: 10px 0;
+  margin-bottom: 20px; /* Increase the margin bottom for more space */
+}
+
+/* Style the list items */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font: 1em sans-serif;
+}
+
+/* Style the navigation links */
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 30px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Style the navigation links on hover */
+nav ul li a:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+/* Create a pseudo-element for the curved button effect */
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -1%;
+  width: 100%;
+  height: 120%;
+  background-color: transparent;
+  border-radius: 50%;
+  transform: scaleX(2);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+/* Adjust the curved button effect on hover */
+nav ul li a:hover::before {
+  transform: scaleX(0);
+}
+
+input[type="text"] {
+  background: transparent;
+  border: 1px solid #eeeeee47;
+  padding: 14px 21px;
+  border-radius: 50px;
+  color: #fff;
+  width: 100%; /* Adjust width to fit the container */
+  max-width: 300px; /* Set maximum width */
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 15px;
+  /* Add a reduced glowing effect */
+  box-shadow: 0 0 5px #ffffff, 0 0 10px #00bfff, 0 0 15px #0080ff, 0 0 20px #0040ff, 0 0 25px #0000ff, 0 0 30px #4b0082, 0 0 35px #8a2be2, 0 0 40px #8a2be2;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #00bfff, 0 0 15px #0080ff, 0 0 20px #0040ff, 0 0 25px #0000ff, 0 0 30px #4b0082, 0 0 35px #8a2be2, 0 0 40px #8a2be2;
+  }
+  to {
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #00bfff, 0 0 30px #0080ff, 0 0 40px #0040ff, 0 0 50px #0000ff, 0 0 60px #4b0082, 0 0 70px #8a2be2, 0 0 80px #8a2be2;
+  }
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  nav ul li {
+    display: block; /* Change to block for stacking on smaller screens */
+    margin-bottom: 10px; /* Add margin between stacked items */
+  }
+}
