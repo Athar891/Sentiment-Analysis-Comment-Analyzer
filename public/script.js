@@ -28,7 +28,7 @@ function extractVideoId(videoLink) {
 
 // Function to fetch comments from YouTube using YouTube Data API
 async function fetchComments(videoId) {
-  const response = await fetch(`https://www.googleapis.com/youtube/v3/commentThreads?key=AIzaSyBQrTiqQvHfrbJcAYXB845pnqYtyD-cKsE&videoId=${videoId}&maxResults=20&pageToken=${nextPageToken}&part=snippet`);
+  const response = await fetch(`https://www.googleapis.com/youtube/v3/commentThreads?key=YOUR_API_KEY&videoId=${videoId}&maxResults=20&pageToken=${nextPageToken}&part=snippet`);
   const data = await response.json();
 
   if (data.items) {
